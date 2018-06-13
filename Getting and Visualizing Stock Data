@@ -4,7 +4,7 @@ import datetime as dt
  
 # We will look at stock prices over the past year, starting  and ending date
 
-start_date=dt.datetime(2015,02,15)
+start_date=dt.datetime(2015,2,15)
 
 end_date=dt.date.today()
 
@@ -12,8 +12,8 @@ end_date=dt.date.today()
 # First argument is the series we want, second is the source ("morningstar" for Finance)
 #Third is the start date, fourth is the end date
 
-compny_name = ["GOOG" , "MSFT" ,"AAPL","FB",start_date,end_date] 
+compny_name = ["GOOG" , "MSFT" ,"AAPL","FB"] 
 
 Data_source="morningstar"
 
-data=web.DataReader(compny_name , Data_source)
+data=web.DataReader(compny_name , Data_source ,start_date,end_date)
