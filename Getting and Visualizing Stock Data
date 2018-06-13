@@ -1,0 +1,19 @@
+# spsaini
+import pandas_datareader as web   # Package and modules for importing data
+import datetime as dt
+ 
+# We will look at stock prices over the past year, starting  and ending date
+
+start_date=dt.datetime(2015,02,15)
+
+end_date=dt.date.today()
+
+# Let's get [Google , Microsoft , Apple ,Facebook ], stock data; corespondig ticker symbol is [GOOG , MSFT , AAPL , FB  ]
+# First argument is the series we want, second is the source ("morningstar" for Finance)
+#Third is the start date, fourth is the end date
+
+compny_name = ["GOOG" , "MSFT" ,"AAPL","FB",start_date,end_date] 
+
+Data_source="morningstar"
+
+data=web.DataReader(compny_name , Data_source)
